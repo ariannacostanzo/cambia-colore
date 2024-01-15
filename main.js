@@ -3,6 +3,7 @@ const button = document.querySelector('button');
 const body = document.querySelector('.container');
 const hexElement = document.getElementById('hex');
 const rgbElement = document.getElementById('rgb');
+const rgbaElement = document.getElementById('rgba')
 const hexComponents = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','F'];
 
 const logSomething = (something) => console.log(something);
@@ -80,9 +81,29 @@ rgbElement.addEventListener('click', () => {
 
 })
 
+rgbaElement.addEventListener('click', () => {
+
+    button.addEventListener('click', () => {
+
+        //gets 3 random numbers to create an rgb color
+        const randomR = getRandomRGBNumber();
+        const randomG = getRandomRGBNumber();
+        const randomB = getRandomRGBNumber();
+        const randomA = Math.random().toFixed(1);
+
+        logSomething(randomA)
+
+        colorNameElement.innerText = `background color: rgba (${randomR}, ${randomG}, ${randomB}, ${randomA})`
+        body.style.backgroundColor = `rgba(${randomR}, ${randomG}, ${randomB}, ${randomA})`
+
+    })
+    
+
+
+
+})
+
+
 
 
 //creare un rgba
-//capire come creare un hex random invece di prenderlo dall'array
-//l'array deve contentere i numeri da 0 a 9 e poi a, b, c, d, e, f. Generare una stringa 
-//di 6 lettere/numeri presi dall'array

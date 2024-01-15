@@ -57,11 +57,11 @@ button {
     cursor: pointer;
 }
 
-#rgb, #hex {
+#rgb, #hex, #rgba {
     cursor: pointer;
 }
 
-#rgb:active, #hex:active {
+#rgb:active, #hex:active, #rgba:active {
     color: violet;
     text-shadow: 0 0 3px black;
 }
