@@ -18,6 +18,11 @@ const colors = [
 '#FF3380', '#CCCC00', '#66E64D', '#4D80CC', '#9900B3', 
 '#E64D66', '#4DB380', '#FF4D4D', '#99E6E6', '#6666FF'];
 
+
+/**Gets random color Index from the array of colors
+ * 
+ * @returns a random color Index
+ */
 const getRandomColor = () => {
     const randomColorIndex = Math.floor(Math.random() *colors.length -1) +1;
     let randomColor;
@@ -30,20 +35,26 @@ const getRandomColor = () => {
 
 };
 
+/**Gets random number from 0 to 255
+ * 
+ * @returns 
+ */
+
 const getRandomNumber = () => {
-    const randomNumber = Math.floor(Math.random() *255) + 1;
+    const randomNumber = Math.floor(Math.random() * (255 + 1 -0)) + 0;
     return randomNumber;
 
 };
 
 
-//Simple
+//Hex colors from the array
 
 
 hexElement.addEventListener('click', () => {
+
     button.addEventListener('click', () => {
 
-        
+        //gets one random color from array
         const randomColor = getRandomColor();
         body.style.backgroundColor = randomColor;
         colorNameElement.innerText = `background color: ${randomColor}`
@@ -55,11 +66,13 @@ hexElement.addEventListener('click', () => {
 });
 
 
-//Hex
+//Rgb colors
 
 rgbElement.addEventListener('click', () => {
 
     button.addEventListener('click', () => {
+
+        //gets 3 random numbers to create an rgb color
         const randomR = getRandomNumber();
         const randomG = getRandomNumber();
         const randomB = getRandomNumber();
@@ -77,4 +90,5 @@ rgbElement.addEventListener('click', () => {
 
 
 
-//fare in modo che non si possa trovare lo stesso numero più volte
+//creare un rgba
+//capire come creare un hex random invece di prenderlo dall'array

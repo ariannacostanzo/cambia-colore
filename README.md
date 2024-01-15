@@ -1,0 +1,1 @@
+Questo è un semplicissimo color flipper. Scegliendo hex o rgb è possibile cambiare colore in base ad un array di colori hex oppure creare un colore random con rgb.
