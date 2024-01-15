@@ -40,7 +40,7 @@ const getRandomRGBNumber = () => {
 };
 
 
-//Hex colors from the array
+//Hex colors 
 
 
 hexElement.addEventListener('click', () => {
@@ -81,6 +81,8 @@ rgbElement.addEventListener('click', () => {
 
 })
 
+//rgba colors
+
 rgbaElement.addEventListener('click', () => {
 
     button.addEventListener('click', () => {
@@ -103,7 +105,3 @@ rgbaElement.addEventListener('click', () => {
 
 })
 
-
-
-
-//creare un rgba
